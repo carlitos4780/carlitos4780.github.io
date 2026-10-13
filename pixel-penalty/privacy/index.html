@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad · Pixel Penalty</title>
+<meta name="description" content="Política de privacidad de Pixel Penalty (ES / EN / PT).">
+<style>
+  :root { --bg: #0f1216; --card: #171b21; --text: #e6e6e6; --muted: #a0a7b0; --accent: #4caf50; --link: #64b5f6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; color: var(--accent); }
+  h2 { font-size: 1.4rem; margin: 40px 0 8px; color: var(--accent); border-bottom: 1px solid #2b3138; padding-bottom: 6px; }
+  h3 { font-size: 1.05rem; margin: 22px 0 6px; }
+  p, li { overflow-wrap: anywhere; }
+  p { margin: 0 0 10px; }
+  ul { padding-left: 20px; margin: 0 0 10px; }
+  a { color: var(--link); }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 12px 0 0; }
+  .muted { color: var(--muted); font-size: .92rem; }
+  .card { background: var(--card); border-radius: 12px; padding: 4px 18px 10px; margin: 12px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Pixel Penalty</h1>
+  <p class="muted">Última actualización · Last updated · Última atualização: 2026-10-12 · v1.2.0</p>
+  <nav>
+    <a href="#es">Español</a>
+    <a href="#en">English</a>
+    <a href="#pt">Português</a>
+    <a href="delete.html">Borrar datos · Delete data · Apagar dados</a>
+  </nav>
+
+  <!-- ===================== ESPAÑOL ===================== -->
+  <section id="es" lang="es">
+    <h2>Política de privacidad</h2>
+    <p>Pixel Penalty (paquete <code>com.ts.penalespixel</code>) es un juego de penales para Android. Esta política explica qué datos se tratan, para qué y cómo puedes borrarlos. Responsable y contacto: <a href="mailto:mencarrov@gmail.com">mencarrov@gmail.com</a>.</p>
+
+    <h3>Datos que se guardan solo en tu teléfono</h3>
+    <p>Tu progreso (monedas, récords, compras de la tienda, Copa, misiones, ajustes e idioma) se guarda en el almacenamiento interno del juego. Puede incluirse en la copia de seguridad de Android de tu cuenta de Google; nunca se envía a nuestros servidores.</p>
+
+    <div class="card">
+    <h3>Servicios de terceros</h3>
+    <ul>
+      <li><strong>Google AdMob</strong> (anuncios). Puede usar el identificador de publicidad del dispositivo, la dirección IP y datos de interacción con los anuncios. En el EEE, Reino Unido y Suiza se pide tu consentimiento con la Plataforma de mensajes de usuario (UMP) de Google; puedes cambiarlo en Ajustes → Privacidad. Los anuncios están limitados a contenido apto para adolescentes (clasificación T). Si compras "Quitar anuncios", no se muestran anuncios.</li>
+      <li><strong>Firebase Analytics</strong>: eventos de uso anónimos (por ejemplo, partidas jugadas o modos usados) para mejorar el juego. No enviamos tu nombre ni tu correo.</li>
+      <li><strong>Firebase Crashlytics</strong>: informes de fallos (modelo del dispositivo, versión de Android, traza del error) para corregir errores.</li>
+      <li><strong>Firebase Remote Config</strong>: descarga ajustes del juego (por ejemplo, eventos de fin de semana). No envía datos personales.</li>
+      <li><strong>Firebase App Check</strong> (Play Integrity): comprueba que las peticiones al modo Reto vienen de la app original.</li>
+      <li><strong>Google Play Juegos</strong>: tablas de clasificación, logros y partidas guardadas en la nube (tu progreso) asociados a tu perfil de Play Juegos. Lo gestiona Google con su propia política.</li>
+      <li><strong>Google Play Billing</strong>: compras dentro de la app. El pago lo procesa Google; nosotros solo recibimos la confirmación de la compra.</li>
+    </ul>
+    </div>
+
+    <h3>Compras</h3>
+    <p>El juego vende con dinero real "Quitar anuncios", el "Paquete de inicio" y paquetes de monedas. Las compras las procesa <strong>Google Play</strong>: el juego no recibe ni guarda tus datos de pago (tarjeta, cuenta, dirección). Solo recibe de Google Play el identificador del producto y un <strong>token de compra</strong> firmado, que se usa para entregarte lo comprado, evitar entregarlo dos veces y restaurarlo; los últimos tokens se guardan solo en tu teléfono.</p>
+    <ul>
+      <li>Las <strong>monedas</strong> son virtuales: no tienen valor en el mundo real, no se pueden cambiar por dinero ni transferir a otros jugadores y solo sirven dentro del juego.</li>
+      <li>Los <strong>reembolsos</strong> se piden a Google Play según sus condiciones (Google Play → Historial de pedidos).</li>
+      <li>El juego tiene <strong>cofres de contenido aleatorio</strong> que se compran con monedas (y por tanto, de forma indirecta, también con monedas compradas). Las probabilidades de cada rareza se muestran en el juego antes de abrir un cofre y están publicadas en <a href="../odds/">probabilidades de los cofres</a>. En Bélgica y Países Bajos los cofres no se ofrecen a cambio de monedas.</li>
+    </ul>
+
+    <h3>Modo Reto (online)</h3>
+    <p>Para jugar el Reto se crea un usuario <strong>anónimo</strong> de Firebase Authentication (sin correo ni contraseña). En Cloud Firestore se guardan:</p>
+    <ul>
+      <li>un nombre visible tomado de tu nombre de Play Juegos, <strong>saneado</strong> (solo letras, números y algunos signos, máximo 24 caracteres; si contiene groserías se reemplaza por "Player XXXX");</li>
+      <li>tu última tanda: dirección y potencia de tus 5 tiros y hacia dónde te lanzaste en tus 5 atajadas;</li>
+      <li>los cosméticos que equipas (marco, celebración, red, estela);</li>
+      <li>resultados: cuántas veces jugaron tu tanda y los marcadores de quienes la jugaron (para avisarte y ofrecerte la revancha; se borran después de avisarte).</li>
+    </ul>
+    <p>Otros jugadores ven tu nombre visible, tu tanda y tus cosméticos. Si usas "Ocultar jugador", ese jugador deja de salirte y se guarda un reporte (tu id anónimo, el del jugador reportado, su nombre visible y la fecha) solo para revisión.</p>
+
+    <h3>Duelo local (Nearby Connections)</h3>
+    <p>El duelo con un amigo cercano usa Google Nearby Connections (Bluetooth y Wi-Fi). Los datos de la partida viajan <strong>solo entre los dos dispositivos</strong>; no se envían a ningún servidor. Android puede pedir permisos de Bluetooth, dispositivos cercanos o ubicación para encontrar al otro teléfono; no usamos tu ubicación para nada más.</p>
+
+    <h3>Notificaciones</h3>
+    <p>El juego programa notificaciones locales (avisos del Reto y recordatorios). Puedes apagarlas en Ajustes o en los ajustes de Android.</p>
+
+    <h3>Venta de datos y menores</h3>
+    <p>No vendemos ni alquilamos tus datos. El juego no está dirigido a menores de 13 años y no recogemos a sabiendas datos de menores de esa edad; si crees que un menor nos envió datos, escríbenos y los borraremos.</p>
+
+    <h3>Conservación y borrado</h3>
+    <p>Los datos del Reto se conservan mientras uses el modo; cada partida nueva sobrescribe la anterior. Puedes borrarlos en cualquier momento desde <strong>Ajustes → "Borrar mis datos online"</strong> o escribiendo a <a href="mailto:mencarrov@gmail.com">mencarrov@gmail.com</a>. Más información en <a href="delete.html">cómo borrar tus datos</a>. Desinstalar la app borra los datos guardados en el teléfono.</p>
+
+    <h3>Cambios</h3>
+    <p>Si esta política cambia, publicaremos la nueva versión en esta página con su fecha.</p>
+  </section>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <section id="en" lang="en">
+    <h2>Privacy policy</h2>
+    <p>Pixel Penalty (package <code>com.ts.penalespixel</code>) is a penalty-kick game for Android. This policy explains what data is processed, why, and how you can delete it. Controller and contact: <a href="mailto:mencarrov@gmail.com">mencarrov@gmail.com</a>.</p>
+
+    <h3>Data stored only on your phone</h3>
+    <p>Your progress (coins, records, store purchases, Cup, missions, settings and language) is stored in the game's internal storage. It may be included in your Google account's Android backup; it is never sent to our servers.</p>
+
+    <div class="card">
+    <h3>Third-party services</h3>
+    <ul>
+      <li><strong>Google AdMob</strong> (ads). It may use the device advertising ID, IP address and ad interaction data. In the EEA, UK and Switzerland your consent is requested with Google's User Messaging Platform (UMP); you can change it in Settings → Privacy. Ads are limited to teen-appropriate content (rating T). If you buy "Remove ads", no ads are shown.</li>
+      <li><strong>Firebase Analytics</strong>: anonymous usage events (for example, games played or modes used) to improve the game. We do not send your name or email.</li>
+      <li><strong>Firebase Crashlytics</strong>: crash reports (device model, Android version, error trace) to fix bugs.</li>
+      <li><strong>Firebase Remote Config</strong>: downloads game settings (for example, weekend events). It sends no personal data.</li>
+      <li><strong>Firebase App Check</strong> (Play Integrity): checks that Challenge requests come from the original app.</li>
+      <li><strong>Google Play Games</strong>: leaderboards, achievements and cloud saved games (your progress) linked to your Play Games profile. Google handles it under its own policy.</li>
+      <li><strong>Google Play Billing</strong>: in-app purchases. Payment is processed by Google; we only receive the purchase confirmation.</li>
+    </ul>
+    </div>
+
+    <h3>Purchases</h3>
+    <p>The game sells "Remove ads", the "Starter pack" and coin packs for real money. Purchases are processed by <strong>Google Play</strong>: the game never receives or stores your payment details (card, account, address). It only receives from Google Play the product id and a signed <strong>purchase token</strong>, used to deliver what you bought, avoid delivering it twice and restore it; the latest tokens are stored only on your phone.</p>
+    <ul>
+      <li><strong>Coins</strong> are virtual: they have no real-world value, cannot be exchanged for money or transferred to other players, and can only be used in the game.</li>
+      <li><strong>Refunds</strong> are requested from Google Play under its terms (Google Play → Order history).</li>
+      <li>The game has <strong>random-content chests</strong> bought with coins (and therefore, indirectly, also with purchased coins). The odds of each rarity are shown in the game before opening a chest and are published at <a href="../odds/">chest odds</a>. In Belgium and the Netherlands chests are not offered for coins.</li>
+    </ul>
+
+    <h3>Challenge mode (online)</h3>
+    <p>To play the Challenge an <strong>anonymous</strong> Firebase Authentication user is created (no email or password). Cloud Firestore stores:</p>
+    <ul>
+      <li>a display name taken from your Play Games name, <strong>sanitized</strong> (letters, digits and a few symbols only, up to 24 characters; if it contains profanity it is replaced by "Player XXXX");</li>
+      <li>your latest shootout: direction and power of your 5 kicks and where you dived on your 5 saves;</li>
+      <li>the cosmetics you equip (frame, celebration, net, trail);</li>
+      <li>results: how many times your shootout was played and the scores of those who played it (to notify you and offer a rematch; deleted after you are notified).</li>
+    </ul>
+    <p>Other players see your display name, your shootout and your cosmetics. If you use "Hide player", that player stops showing up and a report (your anonymous id, the reported player's id, their display name and the date) is stored for review only.</p>
+
+    <h3>Local duel (Nearby Connections)</h3>
+    <p>The duel with a nearby friend uses Google Nearby Connections (Bluetooth and Wi-Fi). Match data travels <strong>only between the two devices</strong>; nothing is sent to any server. Android may ask for Bluetooth, nearby devices or location permissions to find the other phone; we do not use your location for anything else.</p>
+
+    <h3>Notifications</h3>
+    <p>The game schedules local notifications (Challenge results and reminders). You can turn them off in Settings or in Android settings.</p>
+
+    <h3>Sale of data and children</h3>
+    <p>We do not sell or rent your data. The game is not directed to children under 13 and we do not knowingly collect data from them; if you believe a child sent us data, contact us and we will delete it.</p>
+
+    <h3>Retention and deletion</h3>
+    <p>Challenge data is kept while you use the mode; each new game overwrites the previous one. You can delete it at any time from <strong>Settings → "Delete my online data"</strong> or by emailing <a href="mailto:mencarrov@gmail.com">mencarrov@gmail.com</a>. See <a href="delete.html">how to delete your data</a>. Uninstalling the app deletes the data stored on the phone.</p>
+
+    <h3>Changes</h3>
+    <p>If this policy changes, the new version will be published on this page with its date.</p>
+  </section>
+
+  <!-- ===================== PORTUGUÊS ===================== -->
+  <section id="pt" lang="pt-BR">
+    <h2>Política de privacidade</h2>
+    <p>Pixel Penalty (pacote <code>com.ts.penalespixel</code>) é um jogo de pênaltis para Android. Esta política explica quais dados são tratados, para quê e como você pode apagá-los. Responsável e contato: <a href="mailto:mencarrov@gmail.com">mencarrov@gmail.com</a>.</p>
+
+    <h3>Dados guardados só no seu celular</h3>
+    <p>Seu progresso (moedas, recordes, compras da loja, Copa, missões, configurações e idioma) fica no armazenamento interno do jogo. Pode entrar no backup do Android da sua conta Google; nunca é enviado aos nossos servidores.</p>
+
+    <div class="card">
+    <h3>Serviços de terceiros</h3>
+    <ul>
+      <li><strong>Google AdMob</strong> (anúncios). Pode usar o ID de publicidade do dispositivo, o endereço IP e dados de interação com anúncios. No EEE, Reino Unido e Suíça seu consentimento é pedido com a Plataforma de mensagens ao usuário (UMP) do Google; você pode mudá-lo em Ajustes → Privacidade. Os anúncios são limitados a conteúdo adequado para adolescentes (classificação T). Se você comprar "Remover anúncios", nenhum anúncio é exibido.</li>
+      <li><strong>Firebase Analytics</strong>: eventos de uso anônimos (por exemplo, partidas jogadas ou modos usados) para melhorar o jogo. Não enviamos seu nome nem seu e-mail.</li>
+      <li><strong>Firebase Crashlytics</strong>: relatórios de falhas (modelo do aparelho, versão do Android, rastro do erro) para corrigir bugs.</li>
+      <li><strong>Firebase Remote Config</strong>: baixa configurações do jogo (por exemplo, eventos de fim de semana). Não envia dados pessoais.</li>
+      <li><strong>Firebase App Check</strong> (Play Integrity): verifica que as solicitações do Desafio vêm do app original.</li>
+      <li><strong>Google Play Games</strong>: placares, conquistas e jogos salvos na nuvem (seu progresso) ligados ao seu perfil do Play Games. O Google os gerencia com sua própria política.</li>
+      <li><strong>Google Play Billing</strong>: compras no app. O pagamento é processado pelo Google; só recebemos a confirmação da compra.</li>
+    </ul>
+    </div>
+
+    <h3>Compras</h3>
+    <p>O jogo vende com dinheiro real "Remover anúncios", o "Pacote inicial" e pacotes de moedas. As compras são processadas pelo <strong>Google Play</strong>: o jogo não recebe nem guarda seus dados de pagamento (cartão, conta, endereço). Só recebe do Google Play o identificador do produto e um <strong>token de compra</strong> assinado, usado para entregar o que você comprou, evitar entregar duas vezes e restaurar a compra; os últimos tokens ficam guardados só no seu celular.</p>
+    <ul>
+      <li>As <strong>moedas</strong> são virtuais: não têm valor no mundo real, não podem ser trocadas por dinheiro nem transferidas a outros jogadores e só servem dentro do jogo.</li>
+      <li>Os <strong>reembolsos</strong> são pedidos ao Google Play conforme as condições dele (Google Play → Histórico de pedidos).</li>
+      <li>O jogo tem <strong>baús de conteúdo aleatório</strong> comprados com moedas (e, portanto, de forma indireta, também com moedas compradas). As probabilidades de cada raridade aparecem no jogo antes de abrir um baú e estão publicadas em <a href="../odds/">probabilidades dos baús</a>. Na Bélgica e nos Países Baixos os baús não são oferecidos em troca de moedas.</li>
+    </ul>
+
+    <h3>Modo Desafio (online)</h3>
+    <p>Para jogar o Desafio é criado um usuário <strong>anônimo</strong> do Firebase Authentication (sem e-mail nem senha). No Cloud Firestore ficam:</p>
+    <ul>
+      <li>um nome visível tirado do seu nome no Play Games, <strong>higienizado</strong> (só letras, números e alguns símbolos, até 24 caracteres; se tiver palavrões é trocado por "Player XXXX");</li>
+      <li>sua última disputa: direção e força dos seus 5 chutes e para onde você pulou nas suas 5 defesas;</li>
+      <li>os cosméticos que você equipa (moldura, comemoração, rede, rastro);</li>
+      <li>resultados: quantas vezes jogaram sua disputa e os placares de quem jogou (para avisar você e oferecer a revanche; apagados depois do aviso).</li>
+    </ul>
+    <p>Outros jogadores veem seu nome visível, sua disputa e seus cosméticos. Se você usar "Ocultar jogador", esse jogador deixa de aparecer e fica guardada uma denúncia (seu id anônimo, o do jogador denunciado, o nome visível dele e a data) só para revisão.</p>
+
+    <h3>Duelo local (Nearby Connections)</h3>
+    <p>O duelo com um amigo por perto usa o Google Nearby Connections (Bluetooth e Wi-Fi). Os dados da partida trafegam <strong>só entre os dois aparelhos</strong>; nada é enviado a servidores. O Android pode pedir permissões de Bluetooth, dispositivos próximos ou localização para achar o outro celular; não usamos sua localização para mais nada.</p>
+
+    <h3>Notificações</h3>
+    <p>O jogo agenda notificações locais (avisos do Desafio e lembretes). Você pode desligá-las em Ajustes ou nas configurações do Android.</p>
+
+    <h3>Venda de dados e menores</h3>
+    <p>Não vendemos nem alugamos seus dados. O jogo não é direcionado a menores de 13 anos e não coletamos intencionalmente dados deles; se você acha que um menor nos enviou dados, fale conosco e vamos apagá-los.</p>
+
+    <h3>Retenção e exclusão</h3>
+    <p>Os dados do Desafio ficam guardados enquanto você usa o modo; cada partida nova sobrescreve a anterior. Você pode apagá-los a qualquer momento em <strong>Ajustes → "Apagar meus dados online"</strong> ou escrevendo para <a href="mailto:mencarrov@gmail.com">mencarrov@gmail.com</a>. Veja <a href="delete.html">como apagar seus dados</a>. Desinstalar o app apaga os dados guardados no celular.</p>
+
+    <h3>Mudanças</h3>
+    <p>Se esta política mudar, a nova versão será publicada nesta página com a data.</p>
+  </section>
+</main>
+</body>
+</html>
